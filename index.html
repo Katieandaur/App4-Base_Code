@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Timothy Riedel
+Katie Andaur
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,15 +17,179 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+To develop my own app and learn how to code to make my own diagnostic. This will be extremely useful now and in the future as 
+technology is heavily used and important in todays society. 
  
 Known Issues:
-blah, blah, blah, blah
+No known issues
 -->
 
    <head> 
       
-	   PUT YOUR OLD CODE IN HERE
+	    <head> 
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+	
+<!-- This is where I put the allergy and cold count from the instructions. The "behind the scenes" functions go in the script section.
+This is where the app calculates the data and results and stores them. I had to input 4 * 100 as the way the app will calculate results 
+because there were 4 buttons and 4 options for symptoms being cold or allergy like and * 100 since percent is out of 100. I had to add
+percent signs after the allergy and cold percent so that the app had the percent signs given after the user got their results. 
+-->
+
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+		alert(allergy_count);
+
+        }
+
+        function coldAdd(){
+            cold_count = cold_count + 1;
+                 alert(cold_count);    
+	}   
+	
+	 function results(){
+	     var resultText = document.getElementById("results");
+		 var coldPercent = cold_count / 4 * 100 ;
+                 var allergyPercent = allergy_count / 4 * 100 ;
+		 resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "% <br> Probability it is a cold = " + coldPercent + "%"; 
+
+
+       }
+
+  </script>
+
+<!-- I added this style paragraph so that the app would let me display multiple pages within the HTML body.
+-->
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- This is where I added HTML5, Javascript and CSS3. I used HTML5 when wanting to put things on the screen. Like putting the questions on the screen, 
+Javascript was used for the buttons I made. CSS3 was used to make certain lines color and the alighnemnt of the lines. 
+I also created my four pages in this body section. I used the code from the instructions and changed "id" numbers to the page they corresponded to
+I also changed the "href = "..." to the number of the page it was on. As well as changed the yes or no buttons to their correct spots under cold or allergy. 
+-->
+
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+ 
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p>   
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ <div>
+	 
+
+</div>
+
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	 <p>Do you have a fever?</p>  
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+	<div>
+		
+</div>	
+	
+	
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+		
+	<div id="content" class="w3-container">
+	 <p>Do you have a sore throat?</p>  
+	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+	<div>
+		
+</div>
+		<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	 <p>Are your symptoms seasonal or chronic?</p>  
+	<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	
+	<div>
+		
+		
+		<div class="page" id="result">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results!</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<a   onclick="results();" class="w3-btn w3-black"> Results</a>
+		<p id="results"></p>
+	
+	<div>
+
+		</div>
+		
+<!-- I had alot of trial and error and picked out all the spots i had a mistake in and corrected them. I used "right click" on my app and clicked 
+"inspect" to determine what was wrong with my apps when it was not functioning properly or the way I coded it to. I committed my changes almost after 
+almost every little change I made to my code.
+-->
+		
+		
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
 	   
    </body>
 </html>
