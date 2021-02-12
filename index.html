@@ -41,7 +41,8 @@ percent signs after the allergy and cold percent so that the app had the percent
 -->
 
 <script>
-        var strep_count = 0;
+        
+	 var strep_count = 0;
         var soreThroat_count = 0;
 
 
@@ -54,19 +55,21 @@ percent signs after the allergy and cold percent so that the app had the percent
         function soreThroatAdd(){
             soreThroat_count = soreThroat_count + 1;
                  alert(soreThroat_count);    
-	}  
-
+	}   
 	
 	 function results(){
 	     var resultText = document.getElementById("results");
 		 var soreThroatPercent = soreThroat_count / 4 * 100 ;
                  var strepPercent = strep_count / 4 * 100 ;
 		 resultText.innerHTML = "Probability it is strep = " + strepPercent + "% <br> Probability it is a sore throat = " + soreThroatPercent + "%"; 
+
+
+       }	 
 	 
 	 
 
 
-	}
+	
   
 
   </script>
