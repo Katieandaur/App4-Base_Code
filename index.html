@@ -50,24 +50,25 @@ percent signs after the allergy and cold percent so that the app had the percent
 		alert(strep_count);
 
         }
-	} //function that calculates the number of strep related responses.
+} //function that calculates the number of strep related responses.
 
         function soreThroatAdd(){
             soreThroat_count = soreThroat_count + 1;
                  alert(soreThroat_count);    
 	}   
-	} //function that calculates the number of sore throat related responses.
+} //function that calculates the number of sore throat related responses.
 	
 	 function results(){
 	     var resultText = document.getElementById("results");
 		 var soreThroatPercent = soreThroat_count / 4 * 100 ;
                  var strepPercent = strep_count / 4 * 100 ;
 		 resultText.innerHTML = "Probability it is strep = " + strepPercent + "% <br> Probability it is a sore throat = " + soreThroatPercent + "%"; 
-		 
-       } //function that calculates the probablity of having a sore throat or strep based off the responses.
+	 }
+	 
+} //function that calculates the probablity of having a sore throat or strep based off the responses.
 
 
-       }
+  
 
   </script>
 
