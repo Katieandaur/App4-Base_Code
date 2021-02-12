@@ -17,8 +17,8 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-To develop my own app and learn how to code to make my own diagnostic. This will be extremely useful now and in the future as 
-technology is heavily used and important in todays society. 
+To develop my own app and learn how to code to make my own diagnostic. Also, to learn how to add a picture to my survey. This will be extremely 
+useful now and in the future as technology is heavily used and important in todays society. 
  
 Known Issues:
 No known issues
@@ -50,24 +50,29 @@ percent signs after the allergy and cold percent so that the app had the percent
 		alert(strep_count);
 
         }
+	} //function that calculates the number of strep related responses.
 
         function soreThroatAdd(){
             soreThroat_count = soreThroat_count + 1;
                  alert(soreThroat_count);    
 	}   
+	} //function that calculates the number of sore throat related responses.
 	
 	 function results(){
 	     var resultText = document.getElementById("results");
 		 var soreThroatPercent = soreThroat_count / 4 * 100 ;
                  var strepPercent = strep_count / 4 * 100 ;
 		 resultText.innerHTML = "Probability it is strep = " + strepPercent + "% <br> Probability it is a sore throat = " + soreThroatPercent + "%"; 
+		 
+       } //function that calculates the probablity of having a sore throat or strep based off the responses.
 
 
        }
 
   </script>
 
-<!-- I added this style paragraph so that the app would let me display multiple pages within the HTML body.
+<!-- I added this style paragraph so that the app would let me display multiple pages within the HTML body. Also, added the code to be able to
+add and display a picture in my diagnostic.
 -->
 
 <style>	
@@ -104,6 +109,7 @@ percent signs after the allergy and cold percent so that the app had the percent
 Javascript was used for the buttons I made. CSS3 was used to make certain lines color and the alighnemnt of the lines. 
 I also created my four pages in this body section. I used the code from the instructions and changed "id" numbers to the page they corresponded to
 I also changed the "href = "..." to the number of the page it was on. As well as changed the yes or no buttons to their correct spots under cold or allergy. 
+I also added an image under question 4 by going to the image right clicking and hitting "inspect" and the copying the code into mine. 
 -->
 
 
@@ -174,7 +180,9 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 	
 	
 
-		<img alt="Image result for strep throat" class="n3VNCb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWLnhJSpDWToCWHoZ0j94YyoWX_uP7pBQBXQ&amp;usqp=CAU" data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;">
+		<img alt="Image result for strep throat" 
+		 class="n3VNCb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWLnhJSpDWToCWHoZ0j94YyoWX_uP7pBQBXQ&amp;usqp=CAU" 
+		 data-noaft="1" jsname="HiaYvf" jsaction="load:XAeZkd;">
 
 
 
