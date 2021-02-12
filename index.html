@@ -41,26 +41,26 @@ percent signs after the allergy and cold percent so that the app had the percent
 -->
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var strep_count = 0;
+        var soreThroat_count = 0;
 
 
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+        function strepAdd(){
+            strep_count = strep_count + 1;
+		alert(strep_count);
 
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-                 alert(cold_count);    
+        function soreThroatAdd(){
+            soreThroat_count = soreThroat_count + 1;
+                 alert(soreThroat_count);    
 	}   
 	
 	 function results(){
 	     var resultText = document.getElementById("results");
-		 var coldPercent = cold_count / 4 * 100 ;
-                 var allergyPercent = allergy_count / 4 * 100 ;
-		 resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "% <br> Probability it is a cold = " + coldPercent + "%"; 
+		 var soreThroatPercent = soreThroat_count / 4 * 100 ;
+                 var strepPercent = strep_count / 4 * 100 ;
+		 resultText.innerHTML = "Probability it is strep = " + strepPercent + "% <br> Probability it is a sore throat = " + soreThroatPercent + "%"; 
 
 
        }
@@ -101,11 +101,11 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Strep or a Sore throat?</h1>
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling symptoms of a sore throat, but wondering if it could be a more serious viral infection like Streptococcal pharyngitis?. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -120,9 +120,9 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 	</div>
 
 	<div id="content" class="w3-container">
-        <p>Are your eyes watery or itchy?</p>   
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+        <p>Are you experiencing a high fever?</p>   
+	<a href="#two"  onclick="strepAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="soreThroatAdd();" class="w3-btn w3-black">No</a>
  <div>
 	 
 
@@ -134,9 +134,9 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 	</div>
 	
 	<div id="content" class="w3-container">
-	 <p>Do you have a fever?</p>  
-	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+	 <p>Do you have congestion?</p>  
+	<a href="#three"  onclick="soreThroatAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#three"  onclick="strepAdd();" class="w3-btn w3-black"> No</a>
 	<div>
 		
 </div>	
@@ -148,9 +148,9 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 	</div>
 		
 	<div id="content" class="w3-container">
-	 <p>Do you have a sore throat?</p>  
-	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+	 <p>Do you have a cough?</p>  
+	<a href="#four"  onclick="soreThroatAdd();" class="w3-btn w3-black">Yes</a>
+	<a href="#four"  onclick="strepAdd();" class="w3-btn w3-black"> No</a>
 	<div>
 		
 </div>
@@ -160,9 +160,9 @@ I also changed the "href = "..." to the number of the page it was on. As well as
 	</div>
 	
 	<div id="content" class="w3-container">
-	 <p>Are your symptoms seasonal or chronic?</p>  
-	<a href="#result"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#result"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	 <p>Do you have white patches on your tonsils or back of your throat ?</p>  
+	<a href="#result"  onclick="strepAdd();" class="w3-btn w3-black"> Yes</a>
+	<a href="#result"  onclick="soreThroatAdd();" class="w3-btn w3-black">No</a>
 	
 	<div>
 		
